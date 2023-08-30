@@ -94,6 +94,7 @@ body {
   min-width: 160px;
   height: 40px;
   padding: 0px;
+  transition: color 300ms linear, background-color 300ms linear;
 }
 
 .btn:hover {
@@ -158,11 +159,12 @@ body {
 .header-list {
   display: flex;
   gap: 30px;
-  outline: 1px solid green;
 }
 
 .header-connect {
-  margin-left: auto;
+  /* было auto; но так вылазит кнопка */
+  /* margin-left: auto;  */
+  margin-left: 254px;
 }
 
 .header-item,
@@ -201,6 +203,7 @@ body {
   align-items: flex-end;
   padding-left: 27px;
   padding-bottom: 40px;
+
 }
 
 .hero-list {
@@ -221,7 +224,7 @@ body {
 }
 
 .hero-content {
-  padding: 272px 100px 208px 100px;
+  padding: 272px 0px 208px 100px;
   /* залишили background-color у разі випадку, коли пропаде картинка */
   background-color: rgba(25, 28, 38, 0.80);
   /* якщо зображення непрозоре и його треба затемнити, то спочатку додати градиент, потім зображення */
@@ -240,7 +243,8 @@ body {
   font-weight: 600;
   line-height: var(--typical-lh);
   letter-spacing: 2.2px;
-  color: #303030;
+  color: var(--second-title-color);
+  transition: color 300ms linear;
 }
 
 .hero-link:hover,
@@ -715,3 +719,4 @@ body {
 .footer-link:focus {
   color: var(--accent-color);
 }
+

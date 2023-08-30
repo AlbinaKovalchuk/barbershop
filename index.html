@@ -11,12 +11,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
+    <!-- Animate.css is a library of ready-to-use, cross-browser animations Спрацює тільки при загрузці сайту- тобто один раз -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate On Scroll Library (link + js) працює коли Scroll-ишь  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css" />
-
 </head>
 
 <body>
-    <!-- /* --------------------------------------------header---------------------------------------- */     -->
+    <!----------------------------------------------header------------------------------------------>
     <header class="header">
         <div class="container header-container">
             <nav class="header-navigation">
@@ -57,7 +60,7 @@
                 </div>
                 <div class="hero-content">
                     <p class="hero-top-text top-text">A hair salon for men in Kyiv</p>
-                    <h1 class="hero-title">BarberShop</h1>
+                    <h1 class="hero-title animate__animated animate__fadeInDown">BarberShop</h1>
                     <p class="hero-bottom-text">We are experts in trendy men’s haircuts.
                         We work quickly, carefully and with style.</p>
                 </div>
@@ -74,7 +77,8 @@
                 </ul>
                 <div class="about-content">
                     <p class="about-top-text top-text">About</p>
-                    <h2 class="about-title" id="about"> Best Barbershop in your city </h2>
+                    <h2 class="about-title" id="about" data-aos="zoom-in" data-aos-duration="1000"> Best Barbershop in
+                        your city </h2>
                     <p class="about-bottom-text">If you want to add more confidence to your image, you should definitely
                         visit
                         us.</p>
@@ -94,7 +98,8 @@
         <section class="prices section">
             <div class="container">
                 <p class="prices-top-text top-text">Spend your time with the best masters</p>
-                <h2 class="prices-title" id="services and prices"> Services and prices </h2>
+                <h2 class="prices-title" id="services and prices" data-aos="fade-up" data-aos-duration="1000"> Services
+                    and prices </h2>
                 <div class="prices-wrap">
                     <ul class="prices-list list">
                         <li class="prices-item">
@@ -160,7 +165,8 @@
                 </ul>
                 <div class="benefits-content">
                     <p class="benefits-top-text top-text">Old traditional school</p>
-                    <h2 class="benefits-title section-title">¿Why people come to us?</h2>
+                    <h2 class="benefits-title section-title" data-aos="flip-right" data-aos-duration="1000">
+                        ¿Why people come to us?</h2>
                     <p class="benefits-bottom-text">
                         Only good things are said about us. But it's better to see and feel 1
                         time than read 10 times.
@@ -172,7 +178,8 @@
         <section class="barbers section">
             <div class="container">
                 <p class="barbers-top-text top-text">For true enjoyers of the atmosphere</p>
-                <h2 class="barbers-title" id="barbers">Our barbers</h2>
+                <h2 class="barbers-title" id="barbers" data-aos="zoom-out-right" data-aos-duration="1000">Our barbers
+                </h2>
                 <ul class="barbers-list list">
                     <li class="barbers-item">
                         <img src="./img/barber-img1.jpg" alt="haircut" width="370" height="346">
@@ -268,6 +275,13 @@
                     rel="noopener noreferrer nofollow">Youtube</a></li>
         </ul>
     </footer>
+<!------------------------------------------------>
+
+</div>
+<!---- Animate On Scroll Library ( link + js) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
+    
 </body>
 
 </html>

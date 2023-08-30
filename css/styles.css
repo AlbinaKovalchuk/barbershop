@@ -543,7 +543,6 @@ body {
 }
 
 .barbers-item-content {
-  outline: 1px solid green;
   padding-top: 30px;
 }
 
@@ -720,3 +719,67 @@ body {
   color: var(--accent-color);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #30303079;
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  transition: transform 300ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #303030;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+
+/* класс для приховування модалки */
+.is-hidden {
+  /* прибирає можливість фокусу  */
+  visibility: hidden;
+  /* робить невидимим */
+  opacity: 0;
+  /* запобігає попаданню на неї кліком  */
+  pointer-events: none;
+  /* display:none; не можна анімувати, тому й не використоваємо */
+}
+
+.modal-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}

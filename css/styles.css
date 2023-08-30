@@ -578,9 +578,19 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: tomato;
-  display: block;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* не треба окремо задавати колір для barbers-soc-icon, бо іконка буде наслідувуати колір від батька через fill */
+  fill: var(--second-btn-color);
 }
+
+.barbers-soc-icon:hover,
+.barbers-soc-icon:focus {
+  fill: var(--accent-color);
+}
+
 
 /* ---------------------------------------   gallery  --------------------------------------------- */
 .gallery {}

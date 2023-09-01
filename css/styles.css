@@ -164,7 +164,7 @@ body {
 .header-connect {
   /* было auto; но так вылазит кнопка */
   /* margin-left: auto;  */
-  margin-left: 254px;
+  margin-left: 240px;
 }
 
 .header-item,
@@ -262,7 +262,7 @@ body {
 }
 
 .hero-title {
-  color: #FFF;
+  color: #ffffff;
   font-family: 'Raleway', sans-serif;
   font-size: 72px;
   font-weight: 700;
@@ -278,7 +278,7 @@ body {
   line-height: 1.67;
   letter-spacing: 0.36px;
   color: #9DA4BD;
-  max-width: 365px;
+  max-width: 360px;
 }
 
 /* --------------------------------------- ABOUT  --------------------------------------------- */
@@ -352,11 +352,12 @@ body {
   background-image: url(../img/prices_bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 .prices-wrap {
   display: flex;
+  justify-content: space-between;
 }
 
 .prices-top-text {
@@ -382,7 +383,7 @@ body {
 .prices-list {
   padding: 30px 20px;
   width: calc((100% -30px)/ 2);
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .prices-list:first-child {
@@ -622,28 +623,100 @@ body {
   background-image: url(../img/contacts-bg.png);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: calc(50% + 15px);
+  background-size: calc(50% - 15px) 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .contact-container {
   display: flex;
-}
-
-.online {
-  width: calc(50% + 15px);
+  justify-content: space-between;
 }
 
 .online-title,
 .contacts-title {
-  color: #FFF;
+  color: var(--main-title-color);
   font-family: 'Raleway', sans-serif;
   font-size: 42px;
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: 2.1px;
   margin-bottom: 40px;
+}
+
+.online {
+  width: calc(50% - 15px);
+}
+
+.online-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.online-input-wrap {
+  position: relative;
+}
+
+.online-area-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.online-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #9DA4BD66;
+  transition: transform 250ms linear;
+}
+
+.online-input {
+  width: 270px;
+  height: 24px;
+  margin-bottom: 44px;
+}
+
+.online-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.40);
+  outline: transparent;
+  color: #9DA4BD;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 1.1px;
+}
+
+.online-item:focus {
+  border-color: #ffffff;
+}
+
+.online-item:not(:placeholder-shown)+.online-label {
+  transform: translateY(-100%);
+}
+
+.online-item:focus+.online-label {
+  transform: translateY(-100%);
+  color: var(--main-title-color);
+}
+
+.online-comment {
+  width: 100%;
+  height: 76px;
+  margin-bottom: 44px;
+  resize: none;
+  color: #9DA4BD;
+}
+
+.online-btn {
+  color: var(--main-btn-color);
 }
 
 .contacts {
@@ -667,19 +740,18 @@ body {
   display: block;
 }
 
-.contacts-list {}
+/* telef  and mail*/
 
-.contacts-item {
-  /* telef  and mail*/
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.66;
-  letter-spacing: 0.36px;
-  color: #9DA4BD;
+.contacts-item+.contacts-item {
+  margin-top: 20px;
 }
 
-.contacts-link {}
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
 
 .contacts-subtitle {
   /* font-family:'Open Sans', sans-serif; */
@@ -687,8 +759,14 @@ body {
   font-weight: 600;
   line-height: var(--typical-lh);
   text-transform: uppercase;
-  color: #FFF;
+  color: #ffffff;
   margin-bottom: 20px;
+
+}
+
+.contacts-subtitle::before {
+  color: rgba(157, 164, 189, 0.40);
+  ;
 }
 
 .contacts-schedule {
@@ -722,13 +800,20 @@ body {
   letter-spacing: 2.2px;
   color: var(--second-title-color);
 }
-
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--second-title-color);
+}
 
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
 }
 
+/* ----------------------------------------  modal   -------------------------------------------------- */
 .backdrop {
   position: fixed;
   top: 0;
@@ -747,6 +832,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
   transition: transform 300ms linear;
+  padding: 50px;
 }
 
 .backdrop.is-hidden .modal {
@@ -775,10 +861,13 @@ body {
   border-color: var(--accent-color);
 }
 
+.modal-send-btn {
+  color: var(--second-btn-color);
+}
 
 /* класс для приховування модалки */
 .is-hidden {
-  /* прибирає можливість фокусу  */
+  /* прибирає можливість фокусу */
   visibility: hidden;
   /* робить невидимим */
   opacity: 0;
@@ -787,9 +876,40 @@ body {
   /* display:none; не можна анімувати, тому й не використоваємо */
 }
 
-.modal-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px;
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.modal-label {
+  color: var(--second-title-color);
+  font-size: 12px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: var(--second-title-color);
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.modal-input::placeholder {
+  font-size: 14px;
+  color: var(--accent-color);
+}
+
+.modal-comment {
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--second-title-color);
+  border-radius: 5px;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 10px;
 }

@@ -294,6 +294,24 @@
             <div class="container contact-container">
                 <section class="online section">
                     <h2 class="online-title section-title">Online-booking</h2>
+                    <form class="online-form">
+                        <div class="online-input-wrap">
+                            <input type="text" id="online-name" class="online-input online-item" name="online-name"
+                                placeholder=" " />
+                            <label for="online-name" class="online-label">Name*</label>
+                        </div>
+                        <div class="online-input-wrap">
+                            <input type="tel" id="online-phone" class="online-input online-item" name="online-phone"
+                                placeholder=" " />
+                            <label for="online-phone" class="online-label">Phone*</label>
+                        </div>
+                        <div class="online-area-wrap">
+                            <textarea id="online-mess" name="online-mess" class="online-comment online-item"
+                                placeholder=" "></textarea>
+                            <label for="online-mess" class="online-label">Message</label>
+                        </div>
+                        <button type="submit" class="btn online-btn">Send</button>
+                    </form>
                 </section>
                 <!--------------------------------------- ----------------------------------------- -->
                 <section class="contacts section">
@@ -307,12 +325,12 @@
                             <li class="contacts-item">
                                 <a class="contacts-link link" href="tel:+380441111111"> +38 044 111 11 11</a>
                             </li>
-                            <li class="contacts-item"><a class="contacts-link link"
-                                    href="maito:barbershop@email.com">barbershop@email.com</a>
+                            <li class="contacts-item">
+                                <a class="contacts-link link" href="maito:barbershop@email.com">barbershop@email.com</a>
                             </li>
                         </ul>
                     </address>
-                    <p class="contacts-subtitle">Working hours</p>
+                    <p class="contacts-subtitle top-text">Working hours</p>
                     <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
                 </section>
             </div>
@@ -332,16 +350,45 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <p class="modal-text"> Модальне вікно </p>
             <button type="button" class="modal-close-btn" data-modal-close>
                 <svg class="modal-close-icon#icon-close" width="18" height="18">
                     <use href="./img/symbol-defs.svg#icon-close"></use>
                 </svg>
             </button>
+            <!-- <p class="modal-title"> модальне вікно  </p> -->
+            <p class="modal-title">sign up to visit the salon</p>
+            <form>
+                <label for="city" class="modal-label">Оберіть місто*</label>
+                <select name="city" class="modal-input" id="">
+                    <option value="київ">Київ</option>
+                    <option value="харків">Харків</option>
+                    <option value="львів">Львів</option>
+                </select>
+                <!-- 1й вариант label поряд з input-ом, тоді зв'язка через for та id  Додатково можно огорнути в div (дивись textarea)-->
+                <label for="user-name" class="modal-label">Введіть ім'я*</label>
+                <input type="text" class="modal-input" id="user-name" name="user-name" placeholder="Миколай" required>
+                <!-- 2й вар  label огортає input, тоді не треба id в label, але є "минус" в label не можна вкладувати блокові еле-ти типу <div> <p>  --->
+                <label>
+                    <span class="modal-label">Введіть пошту</span>
+                    <input type="email" class="modal-input" name="user-email" placeholder="test@mai.com">
+                </label>
+                <label for="user-tel" class="modal-label">Введіть номер телефону*</label>
+                <input type="tel" class="modal-input" id="user-tel" name="user-tel" placeholder="+380(96)111-11-11"
+                    title="+380(96)111-11-11" pattern="[\+]\d{3}[\(]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="17"
+                    maxlength="17" required>
+                <!-- можно вікористати pattern (АЛЕ треба самому ставити пробіли та скобки) або маску (це через JS) типу +380(_ _) 111 11 11 -->
+                <label for="user-date" class="modal-label">Оберіть дату візиту</label>
+                <input type="date" class="modal-input" id="user-date" name="user-date" placeholder="01.01.2023">
+                <div class="modal-field">
+                    <label for="user-comment" class="modal-label"> Коментар </label>
+                    <textarea name="user-text" id="user-comment" class="modal-comment"
+                        placeholder="Напишіть нам"></textarea>
+                </div>
+                <button type="submit" class="modal-send-btn btn">Send</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js">
-
     </script>
     <!---- Animate On Scroll Library ( link + js) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

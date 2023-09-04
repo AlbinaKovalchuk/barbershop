@@ -779,7 +779,13 @@ body {
 }
 
 /* --------------------------------------------- footer --------------------------------------- */
-.footer {}
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  outline: 1px solid royalblue;
+  display: flex;
+  justify-content: space-between;
+}
 
 .footer-copyright {
   /* font-family:'Open Sans', sans-serif; */
@@ -790,7 +796,19 @@ body {
   color: #9DA4BD;
 }
 
-.footer-list {}
+.footer-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+
+}
 
 .footer-item {
   /* font-family:'Open Sans', sans-serif; */

@@ -1,0 +1,64 @@
+.about {
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-item {
+}
+
+.about-content {
+  max-width: 470px;
+}
+
+.about-title {
+  color: #303030;
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 2.1px;
+  margin-bottom: 20px;
+}
+
+.about-top-text {
+  /* font-family:'Open Sans', sans-serif; */
+  color: var(--second-title-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-bottom-text {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  color: #555;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  /* font-family:'Open Sans', sans-serif; */
+  color: #555;
+  font-size: 14px;
+  /* font-weight: 400; */
+  line-height: 1.86;
+  letter-spacing: 0.28px;
+  margin-bottom: 42px;
+}
+
+.about-btn {
+  color: var(--second-btn-color);
+  /* таж сама кнопка що і в header  лише змінився колір тексту*/
+}

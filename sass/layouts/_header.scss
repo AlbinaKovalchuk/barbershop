@@ -1,0 +1,54 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header-connect {
+  /* было auto; но так вылазит кнопка */
+  /* margin-left: auto;  */
+  margin-left: 240px;
+}
+
+.header-item,
+.header-tel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+
+.header-link {
+  transition: color 250ms linear;
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+
+.header-btn {
+  color: var(--main-btn-color);
+  margin-left: 40px;
+}

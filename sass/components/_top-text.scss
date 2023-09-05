@@ -1,0 +1,17 @@
+.top-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-text::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  /* background-color: rgba(157, 164, 189, 0.60); */
+  background-color: currentColor;
+}

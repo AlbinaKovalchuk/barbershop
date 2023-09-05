@@ -1,0 +1,86 @@
+.barbers {
+}
+
+.barbers-top-text {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--second-title-color);
+}
+
+.barbers-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 2.1px;
+  margin-bottom: 44px;
+  color: var(--second-title-color);
+}
+
+.barbers-list {
+  display: flex;
+  gap: 30px;
+  /* якщо є gap, то елементам обовязково треба додати розмір  через width: calc(),
+  бо якщо пропаде зображення, то схлопнется контент */
+}
+
+.barbers-item {
+  /* обовязково треба задавати розмір через with:calc(),
+  бо якщо пропаде зображення, то схлопнется контент */
+  width: calc((100% - 60px) / 3);
+  text-align: center;
+}
+
+.barbers-item-content {
+  padding-top: 30px;
+}
+
+.barbers-item-title {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 1.38;
+  letter-spacing: 0.36px;
+  margin-bottom: 8px;
+  color: var(--second-title-color);
+}
+
+.barbers-item-text {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0.28px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+}
+
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-soc-item {
+}
+
+.barbers-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* не треба окремо задавати колір для barbers-soc-icon, бо іконка буде наслідувуати колір від батька через fill */
+  fill: var(--second-btn-color);
+}
+
+.barbers-soc-icon:hover,
+.barbers-soc-icon:focus {
+  fill: var(--accent-color);
+}

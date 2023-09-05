@@ -1,13 +1,4 @@
-:root {
-  --main-title-color: #ffffff;
-  --main-btn-color: #ffffff;
-  --second-title-color: #303030;
-  --second-btn-color: #303030;
-  --accent-color: #ff6c00;
-  --typical-lh: 1.36;
-  --main-font: 'Open Sans', sans-serif;
-}
-
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -60,11 +51,14 @@ body {
   text-decoration: none;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+:root {
+  --main-title-color: #ffffff;
+  --main-btn-color: #ffffff;
+  --second-title-color: #303030;
+  --second-btn-color: #303030;
+  --accent-color: #ff6c00;
+  --typical-lh: 1.36;
+  --main-font: "Open Sans", sans-serif;
 }
 
 .visually-hidden {
@@ -76,7 +70,8 @@ body {
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -102,13 +97,20 @@ body {
   color: var(--main-btn-color);
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
 .section-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.17;
@@ -126,720 +128,19 @@ body {
 }
 
 .top-text::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   /* background-color: rgba(157, 164, 189, 0.60); */
   background-color: currentColor;
 }
 
-/* --------------------------------------------header---------------------------------------- */
-.header {
-  position: absolute;
-  width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.header-navigation {
-  display: flex;
-  align-items: center;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-}
-
-
-.header-logo {
-  margin-right: 131px;
-}
-
-.header-list {
-  display: flex;
-  gap: 30px;
-}
-
-.header-connect {
-  /* было auto; но так вылазит кнопка */
-  /* margin-left: auto;  */
-  margin-left: 240px;
-}
-
-.header-item,
-.header-tel {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.33;
-  letter-spacing: 1.2px;
-  color: #FFF;
-}
-
-.header-link {
-  transition: color 250ms linear;
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
-}
-
-.header-btn {
-  color: var(--main-btn-color);
-  margin-left: 40px;
-}
-
-/* --------------------------------------------  HERO  ---------------------------------------- */
-.hero {}
-
-.hero-container {
-  display: flex;
-}
-
-.hero-soc {
-  width: 100px;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 27px;
-  padding-bottom: 40px;
-
-}
-
-.hero-list {
-  display: flex;
-  transform-origin: bottom left;
-  transform: rotate(-90deg) translateY(100%);
-  align-items: center;
-  gap: 40px;
-}
-
-.hero-list::before {
-  content: '';
-  width: 60px;
-  height: 1px;
-  /* background-color: rgba(157, 164, 189, 0.60); */
-  background-color: currentColor;
-
-}
-
-.hero-content {
-  padding: 272px 0px 208px 100px;
-  /* залишили background-color у разі випадку, коли пропаде картинка */
-  background-color: rgba(25, 28, 38, 0.80);
-  /* якщо зображення непрозоре и його треба затемнити, то спочатку додати градиент, потім зображення */
-  /* якщо зображення прозоре и його треба затемнити, то спочатку зображення, а потім градіент, або замінити градіент на background-color , як в секції prices */
-  background-image: linear-gradient(rgba(25, 28, 38, 0.20), rgba(25, 28, 38, 0.20)), url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  flex-grow: 1;
-}
-
-.hero-item {}
-
-.hero-link {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
-  color: var(--second-title-color);
-  transition: color 300ms linear;
-}
-
-.hero-link:hover,
-.hero-link:focus {
-  color: var(--accent-color);
-}
-
-.hero-top-text {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  color: rgba(157, 164, 189, 0.60);
-  margin-bottom: 20px;
-}
-
-.hero-title {
-  color: #ffffff;
-  font-family: 'Raleway', sans-serif;
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: 3.6px;
-  margin-bottom: 20px;
-}
-
-.hero-bottom-text {
-  /* 'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.36px;
-  color: #9DA4BD;
-  max-width: 360px;
-}
-
-/* --------------------------------------- ABOUT  --------------------------------------------- */
-.about {}
-
-.about-container {
-  display: flex;
-  gap: 30px;
-}
-
-.about-list {
-  display: flex;
-  gap: 30px;
-}
-
-.about-item {}
-
-.about-content {
-  max-width: 470px;
-}
-
-.about-title {
-  color: #303030;
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
-  margin-bottom: 20px;
-}
-
-.about-top-text {
-  /* font-family:'Open Sans', sans-serif; */
-  color: var(--second-title-color);
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.about-bottom-text {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  color: #555;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.36px;
-  margin-bottom: 20px;
-}
-
-.about-text {
-  /* font-family:'Open Sans', sans-serif; */
-  color: #555;
-  font-size: 14px;
-  /* font-weight: 400; */
-  line-height: 1.86;
-  letter-spacing: 0.28px;
-  margin-bottom: 42px;
-}
-
-.about-btn {
-  color: var(--second-btn-color);
-  /* таж сама кнопка що і в header  лише змінився колір тексту*/
-}
-
-/* ------------------------------------------  prices  ------------------------------------------ */
-.prices {
-  /* зображення напівпрозоре, тому додаєм фон-"підложку" через background-color */
-  background-color: #111319;
-  background-image: url(../img/prices_bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.prices-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-.prices-top-text {
-  color: rgba(157, 164, 189, 0.60);
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.prices-title {
-  color: #FFF;
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
-  margin-bottom: 44px;
-}
-
-.prices-list {
-  padding: 30px 20px;
-  width: calc((100% -30px)/ 2);
-  /* justify-content: space-between; */
-}
-
-.prices-list:first-child {
-  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.20) 100%);
-}
-
-.prices-list:last-child {
-  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.20) 100%);
-}
-
-.prices-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  align-items: baseline;
-  gap: 12px;
-}
-
-.prices-item::after {
-  content: '';
-  flex-grow: 1;
-  height: 1px;
-  background-color: rgba(157, 164, 189, 0.12);
-}
-
-.prices-item:last-child {
-  margin-bottom: 0;
-}
-
-.prices-item-text {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.36px;
-  color: #9DA4BD;
-}
-
-.prices-item-text:last-child {
-  order: 1;
-}
-
-.prices-btn {
-  /* таж сама кнопка  що і в header */
-  color: var(--main-btn-color);
-  margin: 0 auto;
-  display: block;
-  margin-top: 44px;
-}
-
-/* -------------------------------------------   benefits  ----------------------------------------- */
-
-.benefits-container {
-  display: flex;
-  padding-left: 100px;
-  gap: 130px;
-}
-
-.benefits-content {
-  max-width: 500px;
-  padding-top: 9px;
-}
-
-.benefits-list {
-  display: flex;
-  width: 370px;
-  flex-wrap: wrap;
-}
-
-.benefits-item {
-  width: 170px;
-  height: 133px;
-  padding: 20px 24px;
-  text-align: center;
-  background-color: #f7f7f7;
-}
-
-.benefits-item:nth-child(odd) {
-  margin-right: 30px;
-}
-
-.benefits-item:nth-child(even) {
-  margin-top: 30px;
-}
-
-/* Селектор дитини ">" -лише для  тих span, які діти для li
-   Селектор нащадка (пробіл) " " -  для всіх span, які будуть всередині li */
-
-.benefits-item span {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: calc(57 / 42);
-  letter-spacing: 0.05em;
-  color: #303030;
-}
-
-.benefits-item-text {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: var(--typical-lh);
-  text-align: center;
-  color: var(--second-title-color);
-}
-
-.benefits-top-text {
-  color: var(--second-title-color);
-  margin-bottom: 20px;
-}
-
-.benefits-title {
-  color: var(--second-title-color);
-  margin-bottom: 20px;
-  max-width: 430px;
-}
-
-.benefits-bottom-text {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #555555;
-}
-
-/* --------------------------------------------  barbers  ---------------------------------------- */
-.barbers {}
-
-.barbers-top-text {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: var(--second-title-color);
-}
-
-.barbers-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
-  margin-bottom: 44px;
-  color: var(--second-title-color);
-}
-
-.barbers-list {
-  display: flex;
-  gap: 30px;
-  /* якщо є gap, то елементам обовязково треба додати розмір  через width: calc(),
-  бо якщо пропаде зображення, то схлопнется контент */
-}
-
-.barbers-item {
-  /* обовязково треба задавати розмір через with:calc(),
-  бо якщо пропаде зображення, то схлопнется контент */
-  width: calc((100% - 60px) / 3);
-  text-align: center;
-}
-
-.barbers-item-content {
-  padding-top: 30px;
-}
-
-.barbers-item-title {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.38;
-  letter-spacing: 0.36px;
-  margin-bottom: 8px;
-  color: var(--second-title-color);
-}
-
-.barbers-item-text {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 14px;
-  line-height: 1.35;
-  letter-spacing: 0.28px;
-  margin-bottom: 30px;
-  color: var(--accent-color);
-}
-
-.barbers-soc-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.barbers-soc-item {}
-
-.barbers-soc-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  /* background-color: tomato; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* не треба окремо задавати колір для barbers-soc-icon, бо іконка буде наслідувуати колір від батька через fill */
-  fill: var(--second-btn-color);
-}
-
-.barbers-soc-icon:hover,
-.barbers-soc-icon:focus {
-  fill: var(--accent-color);
-}
-
-
-/* ---------------------------------------   gallery  --------------------------------------------- */
-.gallery {}
-
-.gallery-text {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 44px;
-  color: var(--second-title-color);
-}
-
-.gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  /* якщо gap, то треба додати width: calc ()*/
-}
-
-.gallery-item {
-  width: calc((100% - 90px) / 4);
-}
-
-/* ------------------------------------------- online   contacts ----------------------------------------- */
-.contact-wrap {
-  background-color: #191C26;
-  background-image: url(../img/contacts-bg.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: calc(50% - 15px) 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.online-title,
-.contacts-title {
-  color: var(--main-title-color);
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
-  margin-bottom: 40px;
-}
-
-.online {
-  width: calc(50% - 15px);
-}
-
-.online-form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.online-input-wrap {
-  position: relative;
-}
-
-.online-area-wrap {
-  width: 100%;
-  position: relative;
-}
-
-.online-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 1.1px;
-  text-transform: uppercase;
-  color: #9DA4BD66;
-  transition: transform 250ms linear;
-}
-
-.online-input {
-  width: 270px;
-  height: 24px;
-  margin-bottom: 44px;
-}
-
-.online-item {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(157, 164, 189, 0.40);
-  outline: transparent;
-  color: #9DA4BD;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 1.1px;
-}
-
-.online-item:focus {
-  border-color: #ffffff;
-}
-
-.online-item:not(:placeholder-shown)+.online-label {
-  transform: translateY(-100%);
-}
-
-.online-item:focus+.online-label {
-  transform: translateY(-100%);
-  color: var(--main-title-color);
-}
-
-.online-comment {
-  width: 100%;
-  height: 76px;
-  margin-bottom: 44px;
-  resize: none;
-  color: #9DA4BD;
-}
-
-.online-btn {
-  color: var(--main-btn-color);
-}
-
-.contacts {
-  width: calc(50% - 15px);
-  padding-left: 100px;
-}
-
-.contacts-address {
-  font-style: normal;
-  margin-bottom: 70px;
-}
-
-.contacts-address-link {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.67;
-  letter-spacing: 0.36px;
-  color: #9DA4BD;
-  margin-bottom: 20px;
-  display: block;
-}
-
-/* telef  and mail*/
-
-.contacts-item+.contacts-item {
-  margin-top: 20px;
-}
-
-.contacts-link {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #9da4bd;
-}
-
-.contacts-subtitle {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-
-}
-
-.contacts-subtitle::before {
-  color: rgba(157, 164, 189, 0.40);
-  ;
-}
-
-.contacts-schedule {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.66;
-  letter-spacing: 0.36px;
-  color: #9DA4BD;
-}
-
-/* --------------------------------------------- footer --------------------------------------- */
-.footer {
-  padding-top: 56px;
-  padding-bottom: 56px;
-  outline: 1px solid royalblue;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-copyright {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
-  color: #9DA4BD;
-}
-
-.footer-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.footer-list::before {
-  content: '';
-  width: 60px;
-  height: 1px;
-  background-color: currentColor;
-
-}
-
-.footer-item {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
-  color: var(--second-title-color);
-}
-.footer-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: var(--second-title-color);
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--accent-color);
-}
-
-/* ----------------------------------------  modal   -------------------------------------------------- */
 .backdrop {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #30303079;
+  background-color: rgba(48, 48, 48, 0.4745098039);
   transition: opacity 300ms linear, visibility 300ms linear;
 }
 
@@ -919,6 +220,16 @@ body {
   padding-left: 10px;
 }
 
+.modal-input::-moz-placeholder {
+  font-size: 14px;
+  color: var(--accent-color);
+}
+
+.modal-input:-ms-input-placeholder {
+  font-size: 14px;
+  color: var(--accent-color);
+}
+
 .modal-input::placeholder {
   font-size: 14px;
   color: var(--accent-color);
@@ -933,3 +244,678 @@ body {
   padding: 10px;
   margin-bottom: 10px;
 }
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-content {
+  max-width: 470px;
+}
+
+.about-title {
+  color: #303030;
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 2.1px;
+  margin-bottom: 20px;
+}
+
+.about-top-text {
+  /* font-family:'Open Sans', sans-serif; */
+  color: var(--second-title-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-bottom-text {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  color: #555;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  /* font-family:'Open Sans', sans-serif; */
+  color: #555;
+  font-size: 14px;
+  /* font-weight: 400; */
+  line-height: 1.86;
+  letter-spacing: 0.28px;
+  margin-bottom: 42px;
+}
+
+.about-btn {
+  color: var(--second-btn-color);
+  /* таж сама кнопка що і в header  лише змінився колір тексту*/
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header-connect {
+  /* было auto; но так вылазит кнопка */
+  /* margin-left: auto;  */
+  margin-left: 240px;
+}
+
+.header-item,
+.header-tel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+
+.header-link {
+  transition: color 250ms linear;
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+
+.header-btn {
+  color: var(--main-btn-color);
+  margin-left: 40px;
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-soc {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translateY(100%);
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  /* background-color: rgba(157, 164, 189, 0.60); */
+  background-color: currentColor;
+}
+
+.hero-content {
+  padding: 272px 0px 208px 100px;
+  /* залишили background-color у разі випадку, коли пропаде картинка */
+  background-color: rgba(25, 28, 38, 0.8);
+  /* якщо зображення непрозоре и його треба затемнити, то спочатку додати градиент, потім зображення */
+  /* якщо зображення прозоре и його треба затемнити, то спочатку зображення, а потім градіент, або замінити градіент на background-color , як в секції prices */
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+}
+
+.hero-link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  letter-spacing: 2.2px;
+  color: var(--second-title-color);
+  transition: color 300ms linear;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-color);
+}
+
+.hero-top-text {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 3.6px;
+  margin-bottom: 20px;
+}
+
+.hero-bottom-text {
+  /* 'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  color: #9da4bd;
+  max-width: 360px;
+}
+
+.prices {
+  /* зображення напівпрозоре, тому додаєм фон-"підложку" через background-color */
+  background-color: #111319;
+  background-image: url(../img/prices_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-top-text {
+  color: rgba(157, 164, 189, 0.6);
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.prices-title {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 2.1px;
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
+  /* justify-content: space-between; */
+}
+
+.prices-list:first-child {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list:last-child {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.prices-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.prices-item::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
+}
+
+.prices-item-text {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  color: #9da4bd;
+}
+
+.prices-item-text:last-child {
+  order: 1;
+}
+
+.prices-btn {
+  /* таж сама кнопка  що і в header */
+  color: var(--main-btn-color);
+  margin: 0 auto;
+  display: block;
+  margin-top: 44px;
+}
+
+.benefits-container {
+  display: flex;
+  padding-left: 100px;
+  gap: 130px;
+}
+
+.benefits-content {
+  max-width: 500px;
+  padding-top: 9px;
+}
+
+.benefits-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+/* Селектор дитини ">" -лише для  тих span, які діти для li
+     Селектор нащадка (пробіл) " " -  для всіх span, які будуть всередині li */
+.benefits-item span {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.3571428571;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.benefits-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: var(--typical-lh);
+  text-align: center;
+  color: var(--second-title-color);
+}
+
+.benefits-top-text {
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+}
+
+.benefits-title {
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+  max-width: 430px;
+}
+
+.benefits-bottom-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.barbers-top-text {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--second-title-color);
+}
+
+.barbers-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 2.1px;
+  margin-bottom: 44px;
+  color: var(--second-title-color);
+}
+
+.barbers-list {
+  display: flex;
+  gap: 30px;
+  /* якщо є gap, то елементам обовязково треба додати розмір  через width: calc(),
+  бо якщо пропаде зображення, то схлопнется контент */
+}
+
+.barbers-item {
+  /* обовязково треба задавати розмір через with:calc(),
+  бо якщо пропаде зображення, то схлопнется контент */
+  width: calc((100% - 60px) / 3);
+  text-align: center;
+}
+
+.barbers-item-content {
+  padding-top: 30px;
+}
+
+.barbers-item-title {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 1.38;
+  letter-spacing: 0.36px;
+  margin-bottom: 8px;
+  color: var(--second-title-color);
+}
+
+.barbers-item-text {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0.28px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+}
+
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* не треба окремо задавати колір для barbers-soc-icon, бо іконка буде наслідувуати колір від батька через fill */
+  fill: var(--second-btn-color);
+}
+
+.barbers-soc-icon:hover,
+.barbers-soc-icon:focus {
+  fill: var(--accent-color);
+}
+
+.gallery-text {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  margin-bottom: 44px;
+  color: var(--second-title-color);
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* якщо gap, то треба додати width: calc ()*/
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
+}
+
+.contact-wrap {
+  background-color: #191c26;
+  background-image: url(../img/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px) 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.online-title,
+.contacts-title {
+  color: var(--main-title-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 2.1px;
+  margin-bottom: 40px;
+}
+
+.online {
+  width: calc(50% - 15px);
+}
+
+.online-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.online-input-wrap {
+  position: relative;
+}
+
+.online-area-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.online-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: transform 250ms linear;
+}
+
+.online-input {
+  width: 270px;
+  height: 24px;
+  margin-bottom: 44px;
+}
+
+.online-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: transparent;
+  color: #9da4bd;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 1.1px;
+}
+
+.online-item:focus {
+  border-color: #ffffff;
+}
+
+.online-item:not(:-moz-placeholder-shown) + .online-label {
+  transform: translateY(-100%);
+}
+
+.online-item:not(:-ms-input-placeholder) + .online-label {
+  transform: translateY(-100%);
+}
+
+.online-item:not(:placeholder-shown) + .online-label {
+  transform: translateY(-100%);
+}
+
+.online-item:focus + .online-label {
+  transform: translateY(-100%);
+  color: var(--main-title-color);
+}
+
+.online-comment {
+  width: 100%;
+  height: 76px;
+  margin-bottom: 44px;
+  resize: none;
+  color: #9da4bd;
+}
+
+.online-btn {
+  color: var(--main-btn-color);
+}
+
+.contacts {
+  width: calc(50% - 15px);
+  padding-left: 100px;
+}
+
+.contacts-address {
+  font-style: normal;
+  margin-bottom: 70px;
+}
+
+.contacts-address-link {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  color: #9da4bd;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* telef  and mail*/
+.contacts-item + .contacts-item {
+  margin-top: 20px;
+}
+
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-subtitle {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contacts-subtitle::before {
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.contacts-schedule {
+  /* font-family:'Open Sans', sans-serif; */
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 1.66;
+  letter-spacing: 0.36px;
+  color: #9da4bd;
+}
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copyright {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  letter-spacing: 2.2px;
+  color: #9da4bd;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.footer-item {
+  /* font-family:'Open Sans', sans-serif; */
+  font-size: 11px;
+  font-weight: 600;
+  line-height: var(--typical-lh);
+  letter-spacing: 2.2px;
+  color: var(--second-title-color);
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--second-title-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}/*# sourceMappingURL=main.css.map */

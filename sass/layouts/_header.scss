@@ -16,7 +16,7 @@
 }
 
 .header-logo {
-  margin-right: 131px;
+  margin-right: 130px;
 }
 
 .header-list {
@@ -25,22 +25,19 @@
 }
 
 .header-connect {
-  /* было auto; но так вылазит кнопка */
-  /* margin-left: auto;  */
-  margin-left: 240px;
+  margin-left: auto;
+  margin-right: 17px;
 }
 
 .header-item,
 .header-tel {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.33;
-  letter-spacing: 1.2px;
-  color: #fff;
+  @include font(600, 12px, 1.33, 1.2px);
+  color: var(--main-title-color);
 }
 
 .header-link {
-  transition: color 250ms linear;
+  // transition: color 300ms linear;
+  @extend %animation-color;
 }
 
 .header-link:hover,

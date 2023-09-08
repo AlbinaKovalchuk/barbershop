@@ -1,9 +1,10 @@
 .btn {
   font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 1.08px;
+  @include font(600, 12px, 1.33, 1.08px);
+  // font-weight: 600;
+  // font-size: 12px;
+  // line-height: 1.33;
+  // letter-spacing: 1.08px;
   text-transform: uppercase;
   cursor: pointer;
   border: 1px solid var(--accent-color);
@@ -12,7 +13,9 @@
   min-width: 160px;
   height: 40px;
   padding: 0px;
-  transition: color 300ms linear, background-color 300ms linear;
+  // transition: color 300ms linear, background-color 300ms linear;
+  @extend %animation-color;
+  transition: background-color 300ms linear;
 }
 
 .btn:hover {

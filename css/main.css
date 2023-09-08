@@ -39,10 +39,6 @@ img {
   display: block;
 }
 
-body {
-  font-family: var(--main-font);
-}
-
 .list {
   list-style: none;
 }
@@ -53,12 +49,22 @@ body {
 
 :root {
   --main-title-color: #ffffff;
-  --main-btn-color: #ffffff;
   --second-title-color: #303030;
+  --main-btn-color: #ffffff;
   --second-btn-color: #303030;
   --accent-color: #ff6c00;
-  --typical-lh: 1.36;
+  --main-text-color: #9da4bd;
+  --second-text-color: #555555;
   --main-font: "Open Sans", sans-serif;
+  --second-font: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+.hero-link, .header-link, .btn {
+  transition: color 300ms linear;
 }
 
 .visually-hidden {
@@ -75,6 +81,17 @@ body {
   margin: -1px;
 }
 
+/* класс для приховування модалки */
+.is-hidden {
+  /* прибирає можливість фокусу */
+  visibility: hidden;
+  /* робить невидимим */
+  opacity: 0;
+  /* запобігає попаданню на неї кліком  */
+  pointer-events: none;
+  /* display:none; не можна анімувати, тому й не використоваємо */
+}
+
 .btn {
   font-family: inherit;
   font-weight: 600;
@@ -89,7 +106,7 @@ body {
   min-width: 160px;
   height: 40px;
   padding: 0px;
-  transition: color 300ms linear, background-color 300ms linear;
+  transition: background-color 300ms linear;
 }
 
 .btn:hover {
@@ -110,21 +127,24 @@ body {
 }
 
 .section-title {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--second-font);
   font-weight: 700;
   font-size: 42px;
   line-height: 1.17;
-  letter-spacing: 0.05em;
+  letter-spacing: 2.1px;
+  color: var(--second-title-color);
 }
 
 .top-text {
   font-weight: 600;
   font-size: 11px;
-  line-height: var(--typical-lh);
+  line-height: 1.36;
+  letter-spacing: none;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .top-text::before {
@@ -147,7 +167,7 @@ body {
 .modal {
   width: 500px;
   min-height: 500px;
-  background-color: #ffffff;
+  background-color: var(--main-title-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -163,7 +183,7 @@ body {
 .modal-close-btn {
   width: 30px;
   height: 30px;
-  border: 1px solid #303030;
+  border: 1px solid var(--second-btn-color);
   border-radius: 50%;
   background-color: transparent;
   position: absolute;
@@ -198,10 +218,12 @@ body {
 }
 
 .modal-title {
-  font-size: 24px;
   font-weight: 600;
-  text-align: center;
+  font-size: 16px;
+  line-height: 1.36;
+  letter-spacing: 2.2px;
   color: var(--accent-color);
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -216,22 +238,18 @@ body {
   border-radius: 5px;
   margin-bottom: 10px;
   color: var(--second-title-color);
-  font-size: 16px;
   padding-left: 10px;
 }
 
 .modal-input::-moz-placeholder {
-  font-size: 14px;
   color: var(--accent-color);
 }
 
 .modal-input:-ms-input-placeholder {
-  font-size: 14px;
   color: var(--accent-color);
 }
 
 .modal-input::placeholder {
-  font-size: 14px;
   color: var(--accent-color);
 }
 
@@ -260,48 +278,33 @@ body {
 }
 
 .about-title {
-  color: #303030;
-  font-family: "Raleway", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
   margin-bottom: 20px;
 }
 
 .about-top-text {
-  /* font-family:'Open Sans', sans-serif; */
   color: var(--second-title-color);
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .about-bottom-text {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  color: #555;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.36px;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 .about-text {
-  /* font-family:'Open Sans', sans-serif; */
-  color: #555;
+  font-weight: 400;
   font-size: 14px;
-  /* font-weight: 400; */
   line-height: 1.86;
   letter-spacing: 0.28px;
+  color: var(--text-color);
   margin-bottom: 42px;
 }
 
 .about-btn {
   color: var(--second-btn-color);
-  /* таж сама кнопка що і в header  лише змінився колір тексту*/
 }
 
 .header {
@@ -322,7 +325,7 @@ body {
 }
 
 .header-logo {
-  margin-right: 131px;
+  margin-right: 130px;
 }
 
 .header-list {
@@ -331,22 +334,17 @@ body {
 }
 
 .header-connect {
-  /* было auto; но так вылазит кнопка */
-  /* margin-left: auto;  */
-  margin-left: 240px;
+  margin-left: auto;
+  margin-right: 17px;
 }
 
 .header-item,
 .header-tel {
-  font-size: 12px;
   font-weight: 600;
+  font-size: 12px;
   line-height: 1.33;
   letter-spacing: 1.2px;
-  color: #fff;
-}
-
-.header-link {
-  transition: color 250ms linear;
+  color: var(--main-title-color);
 }
 
 .header-link:hover,
@@ -361,6 +359,8 @@ body {
 
 .hero-container {
   display: flex;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .hero-soc {
@@ -401,12 +401,11 @@ body {
 }
 
 .hero-link {
-  font-size: 11px;
   font-weight: 600;
-  line-height: var(--typical-lh);
+  font-size: 11px;
+  line-height: 1.36;
   letter-spacing: 2.2px;
   color: var(--second-title-color);
-  transition: color 300ms linear;
 }
 
 .hero-link:hover,
@@ -415,27 +414,21 @@ body {
 }
 
 .hero-top-text {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
-  margin-bottom: 20px;
 }
 
 .hero-title {
   color: #ffffff;
   font-family: "Raleway", sans-serif;
-  font-size: 72px;
   font-weight: 700;
+  font-size: 72px;
   line-height: 1.18;
   letter-spacing: 3.6px;
   margin-bottom: 20px;
 }
 
 .hero-bottom-text {
-  /* 'Open Sans', sans-serif; */
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.36px;
@@ -461,28 +454,16 @@ body {
 
 .prices-top-text {
   color: rgba(157, 164, 189, 0.6);
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .prices-title {
-  color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
+  color: var(--main-title-color);
   margin-bottom: 44px;
 }
 
 .prices-list {
   padding: 30px 20px;
   width: calc((100% - 30px) / 2);
-  /* justify-content: space-between; */
 }
 
 .prices-list:first-child {
@@ -513,12 +494,11 @@ body {
 }
 
 .prices-item-text {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.36px;
-  color: #9da4bd;
+  color: var(--main-text-color);
 }
 
 .prices-item-text:last-child {
@@ -571,55 +551,43 @@ body {
 .benefits-item span {
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.3571428571;
-  letter-spacing: 0.05em;
-  color: #303030;
+  line-height: 1.36;
+  letter-spacing: 2.1px;
+  color: var(--second-title-color);
 }
 
 .benefits-item-text {
   font-weight: 600;
   font-size: 11px;
-  line-height: var(--typical-lh);
-  text-align: center;
+  line-height: 1.36;
+  letter-spacing: none;
   color: var(--second-title-color);
+  text-align: center;
 }
 
 .benefits-top-text {
   color: var(--second-title-color);
-  margin-bottom: 20px;
 }
 
 .benefits-title {
-  color: var(--second-title-color);
   margin-bottom: 20px;
   max-width: 430px;
 }
 
 .benefits-bottom-text {
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #555555;
+  letter-spacing: 0.36px;
+  color: var(--second-text-color);
 }
 
 .barbers-top-text {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 20px;
   color: var(--second-title-color);
 }
 
 .barbers-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
   margin-bottom: 44px;
-  color: var(--second-title-color);
 }
 
 .barbers-list {
@@ -641,23 +609,21 @@ body {
 }
 
 .barbers-item-title {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.38;
   letter-spacing: 0.36px;
-  margin-bottom: 8px;
   color: var(--second-title-color);
+  margin-bottom: 8px;
 }
 
 .barbers-item-text {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.35;
   letter-spacing: 0.28px;
-  margin-bottom: 30px;
   color: var(--accent-color);
+  margin-bottom: 30px;
 }
 
 .barbers-soc-list {
@@ -684,20 +650,15 @@ body {
 }
 
 .gallery-text {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  margin-bottom: 44px;
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  /* якщо gap, то треба додати width: calc ()*/
+  /* якщо gap, то треба додати в item width: calc ()*/
 }
 
 .gallery-item {
@@ -722,11 +683,6 @@ body {
 .online-title,
 .contacts-title {
   color: var(--main-title-color);
-  font-family: "Raleway", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
   margin-bottom: 40px;
 }
 
@@ -738,6 +694,11 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
 }
 
 .online-input-wrap {
@@ -753,13 +714,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 1.1px;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
-  transition: transform 250ms linear;
+  transition: transform 300ms linear;
 }
 
 .online-input {
@@ -773,15 +729,11 @@ body {
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   outline: transparent;
-  color: #9da4bd;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 1.1px;
+  color: var(--main-text-color);
 }
 
 .online-item:focus {
-  border-color: #ffffff;
+  border-color: var(--main-title-color);
 }
 
 .online-item:not(:-moz-placeholder-shown) + .online-label {
@@ -806,7 +758,6 @@ body {
   height: 76px;
   margin-bottom: 44px;
   resize: none;
-  color: #9da4bd;
 }
 
 .online-btn {
@@ -816,20 +767,19 @@ body {
 .contacts {
   width: calc(50% - 15px);
   padding-left: 100px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  color: var(--main-text-color);
 }
 
 .contacts-address {
-  font-style: normal;
   margin-bottom: 70px;
 }
 
 .contacts-address-link {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 18px;
   font-weight: 700;
-  line-height: 1.67;
-  letter-spacing: 0.36px;
-  color: #9da4bd;
   margin-bottom: 20px;
   display: block;
 }
@@ -839,34 +789,12 @@ body {
   margin-top: 20px;
 }
 
-.contacts-link {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #9da4bd;
-}
-
 .contacts-subtitle {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
+  color: var(--main-title-color);
 }
 
 .contacts-subtitle::before {
   color: rgba(157, 164, 189, 0.4);
-}
-
-.contacts-schedule {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.66;
-  letter-spacing: 0.36px;
-  color: #9da4bd;
 }
 
 .footer {
@@ -874,15 +802,14 @@ body {
   padding-bottom: 56px;
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 2.2px;
 }
 
 .footer-copyright {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
-  color: #9da4bd;
+  color: var(--main-text-color);
 }
 
 .footer-list {
@@ -899,19 +826,6 @@ body {
 }
 
 .footer-item {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
-  color: var(--second-title-color);
-}
-
-.footer-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
   color: var(--second-title-color);
 }
 

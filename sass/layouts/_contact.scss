@@ -16,11 +16,6 @@
 .online-title,
 .contacts-title {
   color: var(--main-title-color);
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 2.1px;
   margin-bottom: 40px;
 }
 
@@ -32,6 +27,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @include font(600, 11px, 1.36, 1.1px);
+  text-transform: uppercase;
 }
 
 .online-input-wrap {
@@ -47,13 +44,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 1.1px;
-  text-transform: uppercase;
   color: #9da4bd66;
-  transition: transform 250ms linear;
+  transition: transform 300ms linear;
 }
 
 .online-input {
@@ -67,15 +59,11 @@
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   outline: transparent;
-  color: #9da4bd;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 1.1px;
+  color: var(--main-text-color);
 }
 
 .online-item:focus {
-  border-color: #ffffff;
+  border-color: var(--main-title-color);
 }
 
 .online-item:not(:placeholder-shown) + .online-label {
@@ -92,7 +80,6 @@
   height: 76px;
   margin-bottom: 44px;
   resize: none;
-  color: #9da4bd;
 }
 
 .online-btn {
@@ -102,20 +89,16 @@
 .contacts {
   width: calc(50% - 15px);
   padding-left: 100px;
+  @include font(400, 18px, 1.67, 0.36px);
+  color: var(--main-text-color);
 }
 
 .contacts-address {
-  font-style: normal;
   margin-bottom: 70px;
 }
 
 .contacts-address-link {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 18px;
   font-weight: 700;
-  line-height: 1.67;
-  letter-spacing: 0.36px;
-  color: #9da4bd;
   margin-bottom: 20px;
   display: block;
 }
@@ -127,20 +110,10 @@
 }
 
 .contacts-link {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #9da4bd;
 }
 
 .contacts-subtitle {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
+  color: var(--main-title-color);
 }
 
 .contacts-subtitle::before {
@@ -148,10 +121,4 @@
 }
 
 .contacts-schedule {
-  /* font-family:'Open Sans', sans-serif; */
-  /* font-weight: 400; */
-  font-size: 18px;
-  line-height: 1.66;
-  letter-spacing: 0.36px;
-  color: #9da4bd;
 }

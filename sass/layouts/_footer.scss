@@ -3,15 +3,12 @@
   padding-bottom: 56px;
   display: flex;
   justify-content: space-between;
+  @include font(600, 11px, 1.36, 2.2px);
 }
 
 .footer-copyright {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
-  color: #9da4bd;
+  color: var(--main-text-color);
+  
 }
 
 .footer-list {
@@ -28,19 +25,9 @@
 }
 
 .footer-item {
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 11px;
-  font-weight: 600;
-  line-height: var(--typical-lh);
-  letter-spacing: 2.2px;
   color: var(--second-title-color);
 }
 .footer-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: var(--second-title-color);
 }
 
 .footer-link:hover,

@@ -2,7 +2,7 @@
 }
 
 .barbers-top-text {
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .barbers-title {
@@ -29,7 +29,7 @@
 
 .barbers-item-title {
   @include font(400, 18px, 1.38, 0.36px);
-  color: var(--second-title-color);
+  color: var(--second-color);
   margin-bottom: 8px;
 }
 
@@ -57,7 +57,7 @@
   justify-content: center;
   align-items: center;
   /* не треба окремо задавати колір для barbers-soc-icon, бо іконка буде наслідувуати колір від батька через fill */
-  fill: var(--second-btn-color);
+  fill: var(--second-color);
 }
 
 .barbers-soc-icon:hover,

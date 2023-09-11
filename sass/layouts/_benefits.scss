@@ -32,21 +32,21 @@
 }
 
 /* Селектор дитини ">" -лише для  тих span, які діти для li
-     Селектор нащадка (пробіл) " " -  для всіх span, які будуть всередині li */
+   Селектор нащадка (пробіл) " " - для всіх span, які будуть всередині li (онуки) */
 
 .benefits-item span {
   @include font(700, 42px, 1.36, 2.1px);
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .benefits-item-text {
   @include font(600, 11px, 1.36, none);
-  color: var(--second-title-color);
+  color: var(--second-color);
   text-align: center;
 }
 
 .benefits-top-text {
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .benefits-title {

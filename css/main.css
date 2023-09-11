@@ -48,10 +48,8 @@ img {
 }
 
 :root {
-  --main-title-color: #ffffff;
-  --second-title-color: #303030;
-  --main-btn-color: #ffffff;
-  --second-btn-color: #303030;
+  --main-color: #ffffff;
+  --second-color: #303030;
   --accent-color: #ff6c00;
   --main-text-color: #9da4bd;
   --second-text-color: #555555;
@@ -111,7 +109,7 @@ body {
 
 .btn:hover {
   background-color: var(--accent-color);
-  color: var(--main-btn-color);
+  color: var(--main-color);
 }
 
 .container {
@@ -132,7 +130,7 @@ body {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 2.1px;
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .top-text {
@@ -167,7 +165,7 @@ body {
 .modal {
   width: 500px;
   min-height: 500px;
-  background-color: var(--main-title-color);
+  background-color: var(--main-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -183,7 +181,7 @@ body {
 .modal-close-btn {
   width: 30px;
   height: 30px;
-  border: 1px solid var(--second-btn-color);
+  border: 1px solid var(--second-color);
   border-radius: 50%;
   background-color: transparent;
   position: absolute;
@@ -195,15 +193,13 @@ body {
   padding: 0;
   cursor: pointer;
 }
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:hover, .modal-close-btn:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
 
 .modal-send-btn {
-  color: var(--second-btn-color);
+  color: var(--second-color);
 }
 
 /* класс для приховування модалки */
@@ -228,7 +224,7 @@ body {
 }
 
 .modal-label {
-  color: var(--second-title-color);
+  color: var(--second-color);
   font-size: 12px;
 }
 
@@ -237,7 +233,7 @@ body {
   height: 45px;
   border-radius: 5px;
   margin-bottom: 10px;
-  color: var(--second-title-color);
+  color: var(--second-color);
   padding-left: 10px;
 }
 
@@ -256,7 +252,7 @@ body {
 .modal-comment {
   width: 100%;
   height: 100px;
-  border: 1px solid var(--second-title-color);
+  border: 1px solid var(--second-color);
   border-radius: 5px;
   resize: none;
   padding: 10px;
@@ -282,7 +278,7 @@ body {
 }
 
 .about-top-text {
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .about-bottom-text {
@@ -290,7 +286,7 @@ body {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.36px;
-  color: var(--text-color);
+  color: var(--second-text-color);
   margin-bottom: 20px;
 }
 
@@ -299,12 +295,12 @@ body {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.28px;
-  color: var(--text-color);
+  color: var(--second-text-color);
   margin-bottom: 42px;
 }
 
 .about-btn {
-  color: var(--second-btn-color);
+  color: var(--second-color);
 }
 
 .header {
@@ -344,7 +340,7 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 1.2px;
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 
 .header-link:hover,
@@ -353,7 +349,7 @@ body {
 }
 
 .header-btn {
-  color: var(--main-btn-color);
+  color: var(--main-color);
   margin-left: 40px;
 }
 
@@ -405,7 +401,7 @@ body {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 2.2px;
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .hero-link:hover,
@@ -457,7 +453,7 @@ body {
 }
 
 .prices-title {
-  color: var(--main-title-color);
+  color: var(--main-color);
   margin-bottom: 44px;
 }
 
@@ -507,7 +503,7 @@ body {
 
 .prices-btn {
   /* таж сама кнопка  що і в header */
-  color: var(--main-btn-color);
+  color: var(--main-color);
   margin: 0 auto;
   display: block;
   margin-top: 44px;
@@ -547,13 +543,13 @@ body {
 }
 
 /* Селектор дитини ">" -лише для  тих span, які діти для li
-     Селектор нащадка (пробіл) " " -  для всіх span, які будуть всередині li */
+   Селектор нащадка (пробіл) " " - для всіх span, які будуть всередині li (онуки) */
 .benefits-item span {
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 2.1px;
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .benefits-item-text {
@@ -561,12 +557,12 @@ body {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: none;
-  color: var(--second-title-color);
+  color: var(--second-color);
   text-align: center;
 }
 
 .benefits-top-text {
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .benefits-title {
@@ -583,7 +579,7 @@ body {
 }
 
 .barbers-top-text {
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .barbers-title {
@@ -613,7 +609,7 @@ body {
   font-size: 18px;
   line-height: 1.38;
   letter-spacing: 0.36px;
-  color: var(--second-title-color);
+  color: var(--second-color);
   margin-bottom: 8px;
 }
 
@@ -641,7 +637,7 @@ body {
   justify-content: center;
   align-items: center;
   /* не треба окремо задавати колір для barbers-soc-icon, бо іконка буде наслідувуати колір від батька через fill */
-  fill: var(--second-btn-color);
+  fill: var(--second-color);
 }
 
 .barbers-soc-icon:hover,
@@ -650,7 +646,7 @@ body {
 }
 
 .gallery-text {
-  color: var(--second-title-color);
+  color: var(--second-color);
   margin-bottom: 44px;
 }
 
@@ -682,7 +678,7 @@ body {
 
 .online-title,
 .contacts-title {
-  color: var(--main-title-color);
+  color: var(--main-color);
   margin-bottom: 40px;
 }
 
@@ -733,7 +729,7 @@ body {
 }
 
 .online-item:focus {
-  border-color: var(--main-title-color);
+  border-color: var(--main-color);
 }
 
 .online-item:not(:-moz-placeholder-shown) + .online-label {
@@ -750,7 +746,7 @@ body {
 
 .online-item:focus + .online-label {
   transform: translateY(-100%);
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 
 .online-comment {
@@ -761,7 +757,7 @@ body {
 }
 
 .online-btn {
-  color: var(--main-btn-color);
+  color: var(--main-color);
 }
 
 .contacts {
@@ -790,7 +786,7 @@ body {
 }
 
 .contacts-subtitle {
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 
 .contacts-subtitle::before {
@@ -826,7 +822,7 @@ body {
 }
 
 .footer-item {
-  color: var(--second-title-color);
+  color: var(--second-color);
 }
 
 .footer-link:hover,

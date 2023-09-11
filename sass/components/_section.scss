@@ -1,13 +1,12 @@
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-  
 }
 
 .section-title {
   font-family: var(--second-font);
   @include font(700, 42px, 1.17, 2.1px);
-  color: var(--second-title-color);
+  color: var(--second-color);
   // font-family: 'Raleway', sans-serif;
   // color: #303030;
   // font-weight: 700;

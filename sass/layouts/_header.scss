@@ -32,7 +32,7 @@
 .header-item,
 .header-tel {
   @include font(600, 12px, 1.33, 1.2px);
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 
 .header-link {
@@ -46,6 +46,6 @@
 }
 
 .header-btn {
-  color: var(--main-btn-color);
+  color: var(--main-color);
   margin-left: 40px;
 }

@@ -15,7 +15,7 @@
 
 .online-title,
 .contacts-title {
-  color: var(--main-title-color);
+  color: var(--main-color);
   margin-bottom: 40px;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .online-item:focus {
-  border-color: var(--main-title-color);
+  border-color: var(--main-color);
 }
 
 .online-item:not(:placeholder-shown) + .online-label {
@@ -72,7 +72,7 @@
 
 .online-item:focus + .online-label {
   transform: translateY(-100%);
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 
 .online-comment {
@@ -83,7 +83,7 @@
 }
 
 .online-btn {
-  color: var(--main-btn-color);
+  color: var(--main-color);
 }
 
 .contacts {
@@ -113,7 +113,7 @@
 }
 
 .contacts-subtitle {
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 
 .contacts-subtitle::before {

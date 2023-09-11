@@ -50,7 +50,7 @@
 
 .hero-link {
   @include font(600, 11px, 1.36, 2.2px);
-  color: var(--second-title-color);
+  color: var(--second-color);
   // transition: color 300ms linear;
   @extend %animation-color;
 }

@@ -16,7 +16,8 @@
   // transition: color 300ms linear, background-color 300ms linear;
   @extend %animation-color;
   transition: background-color 300ms linear;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--accent-color);
     color: var(--main-color);
   }

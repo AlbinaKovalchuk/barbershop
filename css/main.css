@@ -106,7 +106,7 @@ body {
   padding: 0px;
   transition: background-color 300ms linear;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: var(--accent-color);
   color: var(--main-color);
 }

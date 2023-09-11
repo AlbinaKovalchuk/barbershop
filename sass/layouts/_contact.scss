@@ -46,6 +46,13 @@
   left: 0;
   color: #9da4bd66;
   transition: transform 300ms linear;
+  .online-item:not(:placeholder-shown) + & {
+    transform: translateY(-100%);
+  }
+  .online-item:focus + & {
+    transform: translateY(-100%);
+    color: var(--main-color);
+  }
 }
 
 .online-input {
@@ -63,15 +70,6 @@
   &:focus {
     border-color: var(--main-color);
   }
-}
-
-.online-item:not(:placeholder-shown) + .online-label {
-  transform: translateY(-100%);
-}
-
-.online-item:focus + .online-label {
-  transform: translateY(-100%);
-  color: var(--main-color);
 }
 
 .online-comment {

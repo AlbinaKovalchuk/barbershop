@@ -60,10 +60,9 @@
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   outline: transparent;
   color: var(--main-text-color);
-}
-
-.online-item:focus {
-  border-color: var(--main-color);
+  &:focus {
+    border-color: var(--main-color);
+  }
 }
 
 .online-item:not(:placeholder-shown) + .online-label {
@@ -104,21 +103,13 @@
 }
 
 /* telef  and mail*/
-
 .contacts-item + .contacts-item {
   margin-top: 20px;
 }
 
-.contacts-link {
-}
-
 .contacts-subtitle {
   color: var(--main-color);
-}
-
-.contacts-subtitle::before {
-  color: rgba(157, 164, 189, 0.4);
-}
-
-.contacts-schedule {
+  &::before {
+    color: rgba(157, 164, 189, 0.4);
+  }
 }

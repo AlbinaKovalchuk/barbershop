@@ -21,19 +21,16 @@
   padding: 20px 24px;
   text-align: center;
   background-color: #f7f7f7;
-}
-
-.benefits-item:nth-child(odd) {
-  margin-right: 30px;
-}
-
-.benefits-item:nth-child(even) {
-  margin-top: 30px;
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+  &:nth-child(even) {
+    margin-top: 30px;
+  }
 }
 
 /* Селектор дитини ">" -лише для  тих span, які діти для li
    Селектор нащадка (пробіл) " " - для всіх span, які будуть всередині li (онуки) */
-
 .benefits-item span {
   @include font(700, 42px, 1.36, 2.1px);
   color: var(--second-color);

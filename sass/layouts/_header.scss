@@ -38,11 +38,10 @@
 .header-link {
   // transition: color 300ms linear;
   @extend %animation-color;
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header-btn {

@@ -1,36 +1,69 @@
 .header {
   position: absolute;
   width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header-navigation {
-outline: 1px;
+  outline: 1px;
   display: flex;
   align-items: center;
+  outline: 1px dashed red;
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  @include desktop {
+    align-items: center;
+  }
 }
 
 .header-logo {
-  margin-right: 130px;
+  margin-right: 58px;
+  @include desktop {
+    margin-right: 130px;
+  }
 }
 
+.header-logo-icon {
+  fill: var(--main-color);
+  @include tablet {
+    fill: var(--second-color);
+  }
+}
 .header-list {
-  display: flex;
-  gap: 30px;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 20px;
+  }
+  @include desktop {
+    gap: 30px;
+  }
 }
 
 .header-connect {
-  @include desktop{
+  outline: 1px dashed green;
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  @include desktop {
+    flex-direction: row;
     margin-left: auto;
     margin-right: 17px;
   }
-  
 }
 
 .header-item,
@@ -50,5 +83,11 @@ outline: 1px;
 
 .header-btn {
   color: var(--main-color);
-  margin-left: 40px;
+  @include tablet {
+    margin-top: 40px;
+  }
+  @include desktop {
+    margin-top: 0px;
+    margin-left: 40px;
+  }
 }

@@ -29,9 +29,9 @@
 }
 
 .benefits-list {
-  display: flex;
-  flex-wrap: wrap;
   @include mobile {
+    display: flex;
+    flex-wrap: wrap;
     width: 418px;
   }
   @include tablet {
@@ -49,11 +49,16 @@
   height: 133px;
   text-align: center;
   background-color: #f7f7f7;
-  &:nth-child(odd) {
-    margin-right: 30px;
-  }
-  &:nth-child(even) {
-    margin-top: 35px;
+  margin-bottom: 20px;
+
+  @include mobile {
+    margin-bottom: 0px;
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-child(even) {
+      margin-top: 35px;
+    }
   }
 
   @include tablet {

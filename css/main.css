@@ -771,12 +771,10 @@ body {
   }
 }
 
-.benefits-list {
-  display: flex;
-  flex-wrap: wrap;
-}
 @media screen and (min-width: 480px) {
   .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
     width: 418px;
   }
 }
@@ -798,12 +796,18 @@ body {
   height: 133px;
   text-align: center;
   background-color: #f7f7f7;
+  margin-bottom: 20px;
 }
-.benefits-item:nth-child(odd) {
-  margin-right: 30px;
-}
-.benefits-item:nth-child(even) {
-  margin-top: 35px;
+@media screen and (min-width: 480px) {
+  .benefits-item {
+    margin-bottom: 0px;
+  }
+  .benefits-item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .benefits-item:nth-child(even) {
+    margin-top: 35px;
+  }
 }
 @media screen and (min-width: 768px) {
   .benefits-item {

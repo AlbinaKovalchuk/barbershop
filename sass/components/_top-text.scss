@@ -1,5 +1,12 @@
 .top-text {
-  @include font(600, 11px, 1.36, none);
+  @include font(400, 9px, 1.6, 0.1px);
+  
+  @include mobile {
+    @include font(600, 11px, 1.36, 1.1px);
+  }
+  @include tablet {
+    @include font(600, 11px, 1.36, 0.45px);
+  }
   text-transform: uppercase;
   display: flex;
   align-items: center;

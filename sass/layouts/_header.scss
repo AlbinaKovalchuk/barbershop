@@ -6,6 +6,7 @@
 }
 
 .header-navigation {
+outline: 1px;
   display: flex;
   align-items: center;
 }
@@ -25,8 +26,11 @@
 }
 
 .header-connect {
-  margin-left: auto;
-  margin-right: 17px;
+  @include desktop{
+    margin-left: auto;
+    margin-right: 17px;
+  }
+  
 }
 
 .header-item,

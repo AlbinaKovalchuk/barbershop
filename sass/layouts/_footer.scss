@@ -1,24 +1,37 @@
 .footer {
-  padding-top: 56px;
-  padding-bottom: 56px;
+  @include font(600, 11px, 1.36, 2.2px);
   display: flex;
   justify-content: space-between;
-  @include font(600, 11px, 1.36, 2.2px);
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .footer-copyright {
   color: var(--main-text-color);
+  //   @media screen and (max-width: 767px) {
+  //     padding-top: 79px;
+  //     padding-bottom: 44px;
+  //   }
 }
 
 .footer-list {
   display: flex;
-  align-items: center;
   gap: 40px;
-  &::before {
-    content: '';
-    width: 60px;
-    height: 1px;
-    background-color: currentColor;
+  flex-direction: column;
+  @include mobile {
+    flex-direction: row;
+    &::before {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+  
+  @include tablet {
+    align-items: center;
+    gap: 40px;
+    
   }
 }
 

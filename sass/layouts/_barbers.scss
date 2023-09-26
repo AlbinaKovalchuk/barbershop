@@ -1,4 +1,3 @@
-
 .barbers-top-text {
   color: var(--second-color);
 }
@@ -8,7 +7,11 @@
 }
 
 .barbers-list {
-  display: flex;
+  display: block;
+  @include desktop {
+    display: flex;
+  }
+  flex-wrap: wrap;
   gap: 30px;
   /* якщо є gap, то елементам обовязково треба додати розмір  через width: calc(),
   бо якщо пропаде зображення, то схлопнется контент */
@@ -17,8 +20,16 @@
 .barbers-item {
   /* обовязково треба задавати розмір через with:calc(),
   бо якщо пропаде зображення, то схлопнется контент */
-  width: calc((100% - 60px) / 3);
+  width: 100%;
   text-align: center;
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+    padding-bottom: 0px;
+  }
+  padding-bottom: 64px;
+  &:last-child {
+    padding-bottom: 0px;
+  }
 }
 
 .barbers-item-content {
@@ -42,7 +53,6 @@
   justify-content: center;
   gap: 10px;
 }
-
 
 .barbers-soc-link {
   width: 44px;

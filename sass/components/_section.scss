@@ -1,11 +1,20 @@
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   //  знак конкатенаціїї можна використовуваити ще так:
   //  цей запис дорівнює .section - title {...}
   &-title {
     font-family: var(--second-font);
-    @include font(700, 42px, 1.17, 2.1px);
     color: var(--second-color);
+    @include font(700, 42px, 1.17, 2.1px);
   }
 }

@@ -2,12 +2,12 @@
   margin-left: auto;
   background: transparent;
   border: none;
-   @include tablet {
-     display: none;
-   }
+  @include tablet {
+    display: none;
+  }
 }
 .menu-open-icon {
-  margin-left: auto;
+  // margin-left: auto;
 }
 
 .mob-menu {

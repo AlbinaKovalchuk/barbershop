@@ -22,7 +22,7 @@
 </symbol>
 
 <symbol id="icon-menu" viewBox="0 0 32 32">
-<path fill="#fff" style="fill: var(--color1, #fff)" d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
+<path fill="#ff6c00" style="fill: var(--color1, #ff6c00)" d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
 </symbol>
 
 <symbol id="icon-menu1" viewBox="0 0 32 32">

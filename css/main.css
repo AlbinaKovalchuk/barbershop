@@ -317,6 +317,10 @@ body {
   }
 }
 
+.menu-open-icon {
+  fill: var(--accent-color);
+}
+
 .mob-menu {
   position: fixed;
   top: 0px;

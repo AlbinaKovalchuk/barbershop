@@ -38,13 +38,54 @@
                     <li class="header-item"><a class="header-link link" href="#barbers"> Barbers </a></li>
                     <li class="header-item"><a class="header-link link" href="#contacts"> Contacts </a></li>
                 </ul>
+                <button class="menu-open-btn" type="button" data-menu-open> 
+                    <svg class="menu-open-icon" width="40" height="40">
+                        <use href="/img/symbol-defs.svg#icon-menu"></use>
+                        <!-- fill="#fff" style="fill: var(--color1, #fff)" -->
+                    </svg>
+                </button>
             </nav>
-            
+
             <div class="header-connect">
                 <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
-                <button class="header-btn btn" type="button" data-modal-open>Online-booking </button>
+                <button class="header-btn btn" type="button" data-modal-open> Online-booking </button>
             </div>
         </div>
+        <!-- ----------------------меню на моб версии ----------------------------->
+
+    <div class="backdrop is-hidden" data-menu>
+            <div class="mob-menu">
+                <div class="container">
+                    <div class="mob-menu-top">
+                        <button class="menu-close-btn" type="button" data-menu-close> X </button>
+                        <ul class="mob-menu-list list">
+                            <li class="mob-menu-item"><a class="mob-menu-link link" href="#about"> About </a></li>
+                            <li class="mob-menu-item"><a class="mob-menu-link link" href="#services and prices"> Services
+                                    and
+                                    prices</a>
+                            </li>
+                            <li class="mob-menu-item"><a class="mob-menu-link link" href="#barbers"> Barbers </a></li>
+                            <li class="mob-menu-item"><a class="mob-menu-link link" href="#contacts"> Contacts </a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="mob-menu-bottom">
+                        <div class="mob-menu-connect">
+                            <a class="mob-menu-tel" href="tel:+380441111111">+38 044 111 11 11</a>
+                            <button class="mob-menu-btn btn" type="button" data-modal-open> Online-booking </button>
+                        </div>
+    
+                        <ul class="soc-list list">
+                            <li class="soc-item"><a class="soc-link link" href="" target="_blank"
+                                    rel="noopener noreferrer nofollow">Instagram</a></li>
+                            <li class="soc-item"><a class="soc-link link" href="" target="_blank"
+                                    rel="noopener noreferrer nofollow">Youtube</a></li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+    </div>
     </header>
     <main>
         <!--/* --------------------------------------------  HERO  ---------------------------------------- */ -->
@@ -89,6 +130,7 @@
                         </picture>
                     </li>
                 </ul>
+                
                 <div class="about-content">
                     <p class="about-top-text top-text">About</p>
                     <h2 class="about-title section-title" id="about" data-aos="zoom-in" data-aos-duration="1000"> Best
@@ -480,8 +522,13 @@
             </form>
         </div>
     </div>
+
     <script src="./js/modal.js">
     </script>
+
+    <script src="./js/menu.js">
+    </script>
+
     <!---- Animate On Scroll Library ( link + js) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init();</script>

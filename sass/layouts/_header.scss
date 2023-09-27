@@ -1,6 +1,7 @@
 .header {
   position: absolute;
   width: 100%;
+  padding-top: 40px;
   @include desktop {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -11,18 +12,16 @@
   outline: 1px;
   display: flex;
   align-items: center;
-  outline: 1px dashed red;
 }
 
 .header-container {
+  align-items: center;
   @include tablet {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
   }
-  @include desktop {
-    align-items: center;
-  }
+  
 }
 
 .header-logo {
@@ -51,7 +50,7 @@
 }
 
 .header-connect {
-  outline: 1px dashed green;
+  // outline: 1px dashed green;
   display: none;
   @include tablet {
     display: flex;
